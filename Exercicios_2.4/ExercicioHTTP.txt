@@ -1,0 +1,104 @@
+curl -X GET https://httpbin.org/anything\?firstName=Guilherme
+{
+  "args": {
+    "firstName": "Guilherme"
+  }, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.58.0"
+  }, 
+  "json": null, 
+  "method": "GET", 
+  "origin": "177.74.232.139, 177.74.232.139", 
+  "url": "https://httpbin.org/anything?firstName=Guilherme"
+}
+
+curl -X POST -H "Content-type: application/json" -d '{"lastName":"Santos"}' https://httpbin.org/anything
+{
+  "args": {}, 
+  "data": "{\"lastName\":\"Santos\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Content-Length": "21", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.58.0"
+  }, 
+  "json": {
+    "lastName": "Santos"
+  }, 
+  "method": "POST", 
+  "origin": "177.74.232.139, 177.74.232.139", 
+  "url": "https://httpbin.org/anything"
+}
+
+curl -X PUT -H "Content-type: application/json" -d '{"firstname":"Guilherme","lastname":"Santos"}' https://httpbin.org/anything
+{
+  "args": {}, 
+  "data": "{\"firstname\":\"Guilherme\",\"lastname\":\"Santos\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Content-Length": "45", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.58.0"
+  }, 
+  "json": {
+    "firstname": "Guilherme", 
+    "lastname": "Santos"
+  }, 
+  "method": "PUT", 
+  "origin": "177.74.232.139, 177.74.232.139", 
+  "url": "https://httpbin.org/anything"
+}
+
+curl -X DELETE -d '{"firstname":"Guilherme","lastname":"Santos"}' https://httpbin.org/anything
+
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "{\"firstname\":\"Guilherme\",\"lastname\":\"Santos\"}": ""
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Content-Length": "45", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.58.0"
+  }, 
+  "json": null, 
+  "method": "DELETE", 
+  "origin": "177.74.232.139, 177.74.232.139", 
+  "url": "https://httpbin.org/anything"
+}
+
+curl -X POST -H "Content-type: application/json" -d '{"escola":"Trybe"}' https://httpbin.org/anything
+{
+  "args": {}, 
+  "data": "{\"escola\":\"Trybe\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Content-Length": "18", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.58.0"
+  }, 
+  "json": {
+    "escola": "Trybe"
+  }, 
+  "method": "POST", 
+  "origin": "177.74.232.139, 177.74.232.139", 
+  "url": "https://httpbin.org/anything"
+}

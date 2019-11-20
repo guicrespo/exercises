@@ -1,7 +1,7 @@
 let custoProduto = 100;
-let valorVenda = 100;
-let custoProdutoComImposto = custoProduto += custoProduto * 0.2
-let lucro = (valorVenda - custoProdutoComImposto) * 1000;
+    valorVenda = 100;
+    custoProdutoComImposto = custoProduto += custoProduto * 0.2
+    lucro = (valorVenda - custoProdutoComImposto) * 1000;
 
 if (custoProduto < 0 || valorVenda < 0) {
     console.log("Os valores de custo e venda não podem ser menores que zero")

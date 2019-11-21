@@ -1,7 +1,5 @@
-// essa ficou meio gambiarra, mas não consegui fazer melhor do que isso, por enquanto.
-
-let n = 5;
-let espaco = " ";
+let n = 25;
+let espaco = "";
 let ast = "*";
 
 if (n % 2 == 0 || n < 3) {
@@ -9,7 +7,7 @@ if (n % 2 == 0 || n < 3) {
     return;
 }
 
-for (let i = 1; i < n - 3; i++) {
+for (let i = 1; i <= n/2 - 0.5; i++) {
     espaco += " ";
 }
 for (let i = 1; i <= n; i++) {

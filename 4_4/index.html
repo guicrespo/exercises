@@ -60,16 +60,19 @@
       let nodeText = document.createTextNode("Exercício 3.4 - JavaScript DOM");
       let primeiraDiv = document.createElement("div");
       let classePrimeiraDiv = primeiraDiv.classList.add("main-content");
-      let filhoPrimeiraDiv = document.createElement("div");
-      let classeFilhoPrimeiraDiv = filhoPrimeiraDiv.classList.add("center-content");
+      let primeiroFilhoDiv = document.createElement("div");
+      let classeprimeiroFilhoDiv = primeiroFilhoDiv.classList.add("center-content");
       let paragrafoDivFilho = document.createElement("p");
-      let textoDivFilho = (paragrafoDivFilho.innerHTML = "LALALALALALALALALALALALALLALALA");
+      let textoDivFilho = (paragrafoDivFilho.innerHTML = "Oi, Mundo!");
+      let segundoFilhoDiv = document.createElement("div");
+      let classeSegundoFilhoDiv = segundoFilhoDiv.classList.add("left-content");
             
       node.appendChild(nodeText);
       document.body.appendChild(node);
       document.body.appendChild(primeiraDiv);
-      document.getElementsByClassName("main-content")[0].appendChild(filhoPrimeiraDiv);
+      document.getElementsByClassName("main-content")[0].appendChild(primeiroFilhoDiv);
       document.getElementsByTagName("div")[1].appendChild(paragrafoDivFilho);
+      document.getElementsByClassName("main-content")[0].appendChild(segundoFilhoDiv);
 
     </script>
   </body>

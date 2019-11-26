@@ -62,12 +62,14 @@
       let classePrimeiraDiv = primeiraDiv.classList.add("main-content");
       let filhoPrimeiraDiv = document.createElement("div");
       let classeFilhoPrimeiraDiv = filhoPrimeiraDiv.classList.add("center-content");
-
+      let paragrafoDivFilho = document.createElement("p");
+      let textoDivFilho = (paragrafoDivFilho.innerHTML = "LALALALALALALALALALALALALLALALA");
             
       node.appendChild(nodeText);
       document.body.appendChild(node);
       document.body.appendChild(primeiraDiv);
       document.getElementsByClassName("main-content")[0].appendChild(filhoPrimeiraDiv);
+      document.getElementsByTagName("div")[1].appendChild(paragrafoDivFilho);
 
     </script>
   </body>

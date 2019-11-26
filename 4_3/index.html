@@ -59,6 +59,18 @@
         document.getElementsByTagName("h1")[0].innerHTML = titulo;
       }
       console.log(corrigirTexto("Exercício 3.3 - JavaScript"))
+
+      function todasMaiusculas(tag) {
+        let paragrafos = document.getElementsByTagName(tag);
+        for (let i = 0; i < paragrafos.length; i++) {
+          let mudancaTexto = document.getElementsByTagName(tag)[i].innerHTML
+          mudancaTexto = mudancaTexto.toUpperCase();
+          document.getElementsByTagName(tag)[i].innerHTML = mudancaTexto;
+        }
+      }
+      console.log(todasMaiusculas("p"))
+
+      
         /*
         Aqui você irá modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()

@@ -59,6 +59,7 @@
       let node = document.createElement("h1");
       let nodeText = document.createTextNode("Exercício 3.4 - JavaScript DOM");
       node.appendChild(nodeText);
+      node.className = "title";
       document.body.appendChild(node);
 
       let primeiraDiv = document.createElement("div");
@@ -97,10 +98,20 @@
      
       for (let i = 0; i < 3; i++) {
         let tagh3 = document.createElement("h3");
+        tagh3.className = "description";
         document.getElementsByClassName("main-content")[0].appendChild(tagh3);
-      }     
-      
-      
+      }
+
+      document.getElementsByClassName("main-content")[0].removeChild(segundoFilhoDiv);
+
+      document.getElementsByClassName("right-content")[0].style.marginRight = "auto";
+
+      document.getElementsByClassName("center-content")[0].style.backgroundColor = "green";
+
+      for (i = 9; i >= 8; i--) {
+        let listaRemover = document.getElementsByTagName("li")[i];
+        lista.removeChild(listaRemover);
+      }
 
     </script>
   </body>

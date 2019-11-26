@@ -68,7 +68,9 @@
       let classeSegundoFilhoDiv = segundoFilhoDiv.classList.add("left-content");
       let terceiroFilhoDiv = document.createElement("div");
       let classeTerceiroFilhoDiv = terceiroFilhoDiv.classList.add("right-content");
-
+      let img = document.createElement("img");
+      img.src = "https://picsum.photos/200";
+      let classeImg = img.classList.add("small-image");
             
       node.appendChild(nodeText);
       document.body.appendChild(node);
@@ -77,6 +79,7 @@
       document.getElementsByTagName("div")[1].appendChild(paragrafoDivFilho);
       document.getElementsByClassName("main-content")[0].appendChild(segundoFilhoDiv);
       document.getElementsByClassName("main-content")[0].appendChild(terceiroFilhoDiv);
+      document.getElementsByClassName("left-content")[0].appendChild(img);
 
     </script>
   </body>

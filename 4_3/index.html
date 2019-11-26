@@ -48,7 +48,7 @@
         let corQuadrado = document.getElementsByClassName("main-content")[0];
         corQuadrado.style.backgroundColor = cor;
       }
-      console.log(mudarCorQuadrado("#0fa36b"))
+      console.log(mudarCorQuadrado("#0fa36b"));
 
       function mudarCorCentral(corCentral) {
         document.getElementsByClassName("center-content")[0].style.backgroundColor = corCentral;
@@ -58,7 +58,7 @@
       function corrigirTexto (titulo) {
         document.getElementsByTagName("h1")[0].innerHTML = titulo;
       }
-      console.log(corrigirTexto("Exercício 3.3 - JavaScript"))
+      console.log(corrigirTexto("Exercício 3.3 - JavaScript"));
 
       function todasMaiusculas(tag) {
         let paragrafos = document.getElementsByTagName(tag);
@@ -68,9 +68,16 @@
           document.getElementsByTagName(tag)[i].innerHTML = mudancaTexto;
         }
       }
-      console.log(todasMaiusculas("p"))
+      console.log(todasMaiusculas("p"));
 
-      
+      function conteudoTags (tag) {
+        let conteudo = document.getElementsByTagName(tag);
+        for (let i = 0; i < conteudo.length; i++) {
+          let resultado = document.getElementsByTagName(tag)[i].innerHTML;
+          console.log(resultado);
+        }
+      }
+      conteudoTags("p");
         /*
         Aqui você irá modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()

@@ -66,6 +66,9 @@
       let textoDivFilho = (paragrafoDivFilho.innerHTML = "Oi, Mundo!");
       let segundoFilhoDiv = document.createElement("div");
       let classeSegundoFilhoDiv = segundoFilhoDiv.classList.add("left-content");
+      let terceiroFilhoDiv = document.createElement("div");
+      let classeTerceiroFilhoDiv = terceiroFilhoDiv.classList.add("right-content");
+
             
       node.appendChild(nodeText);
       document.body.appendChild(node);
@@ -73,6 +76,7 @@
       document.getElementsByClassName("main-content")[0].appendChild(primeiroFilhoDiv);
       document.getElementsByTagName("div")[1].appendChild(paragrafoDivFilho);
       document.getElementsByClassName("main-content")[0].appendChild(segundoFilhoDiv);
+      document.getElementsByClassName("main-content")[0].appendChild(terceiroFilhoDiv);
 
     </script>
   </body>

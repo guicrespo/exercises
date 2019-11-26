@@ -58,19 +58,33 @@
     <script>
       let node = document.createElement("h1");
       let nodeText = document.createTextNode("Exercício 3.4 - JavaScript DOM");
+      
       let primeiraDiv = document.createElement("div");
       let classePrimeiraDiv = primeiraDiv.classList.add("main-content");
+      
       let primeiroFilhoDiv = document.createElement("div");
       let classeprimeiroFilhoDiv = primeiroFilhoDiv.classList.add("center-content");
+     
       let paragrafoDivFilho = document.createElement("p");
       let textoDivFilho = (paragrafoDivFilho.innerHTML = "Oi, Mundo!");
+      
       let segundoFilhoDiv = document.createElement("div");
       let classeSegundoFilhoDiv = segundoFilhoDiv.classList.add("left-content");
+      
       let terceiroFilhoDiv = document.createElement("div");
       let classeTerceiroFilhoDiv = terceiroFilhoDiv.classList.add("right-content");
+      
       let img = document.createElement("img");
       img.src = "https://picsum.photos/200";
       let classeImg = img.classList.add("small-image");
+      
+      let lista = document.createElement("ul");
+      let elementosLista = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      for (let i = 0; i < elementosLista.length; i++) {
+        let elementoLista = document.createElement("li");
+        elementoLista.innerHTML = elementosLista[i];
+        lista.appendChild(elementoLista);
+      }
             
       node.appendChild(nodeText);
       document.body.appendChild(node);
@@ -80,6 +94,8 @@
       document.getElementsByClassName("main-content")[0].appendChild(segundoFilhoDiv);
       document.getElementsByClassName("main-content")[0].appendChild(terceiroFilhoDiv);
       document.getElementsByClassName("left-content")[0].appendChild(img);
+      document.getElementsByClassName("right-content")[0].appendChild(lista);
+      
 
     </script>
   </body>

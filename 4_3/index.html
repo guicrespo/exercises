@@ -54,6 +54,11 @@
         document.getElementsByClassName("center-content")[0].style.backgroundColor = corCentral;
       }
       console.log(mudarCorCentral("white"));
+
+      function corrigirTexto (titulo) {
+        document.getElementsByTagName("h1")[0].innerHTML = titulo;
+      }
+      console.log(corrigirTexto("Exercício 3.3 - JavaScript"))
         /*
         Aqui você irá modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()

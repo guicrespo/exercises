@@ -39,10 +39,16 @@
       </div>
     </div>
     <script>
-        function mudarParagrafo(texto) {
-          document.getElementsByTagName("p")[1].innerHTML = texto;
-        }
-        console.log(mudarParagrafo("me vejo trabalhando como programador"))
+      function mudarParagrafo(texto) {
+        document.getElementsByTagName("p")[1].innerHTML = texto;
+      }
+      console.log(mudarParagrafo("me vejo trabalhando como programador"))
+      
+      function mudarCorQuadrado(cor) {
+        let corQuadrado = document.getElementsByClassName("main-content")[0];
+        corQuadrado.style.backgroundColor = cor;
+      }
+      console.log(mudarCorQuadrado("#0fa36b"))
         /*
         Aqui você irá modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()

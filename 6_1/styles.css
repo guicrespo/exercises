@@ -1,0 +1,17 @@
+* {
+  font-family: Ubuntu, sans-serif;
+}
+
+/* usar o style number sem as setinhas do campo */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Chrome */
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+input {
+  margin: .3rem 0 .8rem;
+}

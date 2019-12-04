@@ -1,0 +1,13 @@
+
+/* usar o style number sem as setinhas do campo */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Chrome */
+}
+input[type="number"] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+/* input[type="text"], input[type="number"], input[type="email"] {
+  width: 20rem;
+} */

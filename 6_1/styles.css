@@ -2,6 +2,18 @@
   font-family: Ubuntu, sans-serif;
 }
 
+#dadosProfissionais {
+  margin-top: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 20rem;
+}
+
 /* usar o style number sem as setinhas do campo */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -10,8 +22,17 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance:textfield; /* Firefox */
+  width: 20rem;
 }
 
-input {
+input, textarea {
   margin: .3rem 0 .8rem;
+}
+
+#outraResidencia {
+  width: 10rem;
+}
+
+.radioCasa {
+  margin-right: .5rem;
 }

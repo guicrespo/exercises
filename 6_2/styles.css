@@ -1,3 +1,6 @@
+body {
+  margin: 1rem;
+}
 
 /* usar o style number sem as setinhas do campo */
 input::-webkit-outer-spin-button,

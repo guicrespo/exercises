@@ -9,6 +9,8 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="DatePickerX.min.css">
   <script src="DatePickerX.min.js"></script>
+  <link href="validation.min.css" rel="stylesheet">
+<script src="validation.min.js"></script> 
   <title>Formulário Cadastro Currículo</title>
 </head>
 
@@ -16,7 +18,7 @@
   <header>
     <h1>Cadastro de Currículo</h1>
   </header>
-  <form action="">
+  <form id="myForm" action="">
     <fieldset id="dadosPessoais">
       <legend>Dados Pessoais</legend>
       <div class="form-row form-group">
@@ -38,8 +40,7 @@
       </div>
       <div class="form-group">
         <label for="CPF">CPF</label>
-        <input class="form-control col-md-2 form-control-sm" type="number" id="CPF" name="CPF" maxlength="11" required
-          placeholder="(somente números)" pattern="[0-9]*" inputmode="numeric">
+        <input class="form-control col-md-2 form-control-sm" type="number" id="CPF" name="CPF" pattern=".{11,11}" required placeholder="(somente números)" inputmode="numeric">
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -94,10 +95,11 @@
           maxlength="500" required placeholder="Descreva em até 500 (quinhentos) caracteres">
       </div>
       <div class="form-group">
-        <label for="dataInicio">Data de ínicio das atividades</label>
+        <label for="dataInicio">Data de ínicio das atividades:</label>
         <input type="text" id="dataInicio" name="dataInicio" maxlength="500" required>
       </div>
     </fieldset>
+    <button type="submit">Enviar</button>
   </form>
   <script src="script.js"></script>
 </body>

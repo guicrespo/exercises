@@ -15,3 +15,7 @@ listaEstados.forEach(function(item) {
 document.getElementById('dataInicio').DatePickerX.init({
   format: "dd/mm/yyyy"
 });
+
+validation.init("#myForm", {
+  events: ["change", "paste", "keyup"]
+});

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="DatePickerX.min.css">
   <script src="DatePickerX.min.js"></script>
   <link href="validation.min.css" rel="stylesheet">
-<script src="validation.min.js"></script> 
+  <script src="validation.min.js"></script>
   <title>Formulário Cadastro Currículo</title>
 </head>
 
@@ -35,26 +35,30 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">E-mail</label>
-        <input type="email" class="form-control col-md-2 form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="50" required placeholder="Digite seu e-mail">
+        <input type="email" class="form-control col-md-2 form-control-sm" id="exampleInputEmail1"
+          aria-describedby="emailHelp" maxlength="50" required placeholder="Digite seu e-mail">
         <small id="emailHelp" class="form-text text-muted">Só compartilhe seu e-mail com pessoas confiáveis.</small>
       </div>
       <div class="form-group">
         <label for="CPF">CPF</label>
-        <input class="form-control col-md-2 form-control-sm" type="number" id="CPF" name="CPF" pattern=".{11,11}" required placeholder="(somente números)" inputmode="numeric">
+        <input class="form-control col-md-2 form-control-sm" type="number" id="CPF" name="CPF" pattern=".{11,11}"
+          required placeholder="(somente números)" inputmode="numeric">
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="endereco">Endereço</label>
-          <input class="form-control form-control-sm" type="text" id="endereco" name="endereco" maxlength="200" required placeholder="Digite seu endereço">
+          <input class="form-control form-control-sm" type="text" id="endereco" name="endereco" maxlength="200" required
+            placeholder="Digite seu endereço">
         </div>
-        <div class="form-group col-md-2">          
+        <div class="form-group col-md-2">
           <label for="cidade">Cidade</label>
           <input class="form-control form-control-sm" type="text" id="cidade" name="cidade" maxlength="28" required
             placeholder="Digite sua cidade">
         </div>
         <div class="form-group col-md-2">
           <label for="estados">Estado</label>
-          <input class="form-control form-control-sm" type="text" list="estados" placeholder="Digite seu Estado" required>
+          <input class="form-control form-control-sm" type="text" list="estados" placeholder="Digite seu Estado"
+            required>
           <datalist id="estados"></datalist>
         </div>
       </div>
@@ -74,7 +78,8 @@
           <label class="form-check-label" for="outro">Outro</label>
         </div>
         <div class="form-check-inline">
-          <input class="form-control form-control-sm" id="outraResidencia" type="text" name="outroTipoResidencia" disabled>
+          <input class="form-control form-control-sm" id="outraResidencia" type="text" name="outroTipoResidencia"
+            disabled>
         </div>
       </div>
     </fieldset>
@@ -82,7 +87,8 @@
       <legend>Dados Profissionais</legend>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Breve currículo</label>
-        <textarea class="form-control col-md-6 form-control-sm" id="exampleFormControlTextarea1" rows="5" maxlength="1000" placeholder="Limite: 1000(mil) caracteres" required></textarea>
+        <textarea class="form-control col-md-6 form-control-sm" id="exampleFormControlTextarea1" rows="5"
+          maxlength="1000" placeholder="Limite: 1000(mil) caracteres" required></textarea>
       </div>
       <div class="form-group">
         <label for="cargo">Último Cargo</label>

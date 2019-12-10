@@ -23,7 +23,7 @@ figure {
   body {
     background-color: thistle;
     font-size: medium;
-    margin: 0;
+    margin: 3rem;
   }
   
   h1 {
@@ -33,6 +33,15 @@ figure {
   figure {
     float: left;
     width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: lightcoral;
+    font-size: small;
+    margin: 4rem;
+    max-width: 1000px;
   }
 }
 

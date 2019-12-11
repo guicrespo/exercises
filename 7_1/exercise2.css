@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 450px) {
   body {
     margin: 2rem 1.4rem;
   }
@@ -59,5 +59,65 @@ html {
 
   footer p:nth-child(3) {
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 810px) {
+  body {
+    margin: 2rem 2rem;
+  }
+
+  h1 { 
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .aside-one ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    list-style-type: none;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .aside-two h2 {
+    font-size: 1rem;
+  }
+
+  .aside-two ul {
+    font-size: 0.8rem;
+  }
+
+  .main-content h1 {
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  article p {
+    font-size: 1.3rem;
+    text-align: justify;
+    line-height: 2rem;
+  }
+
+  footer {
+    text-align: center;
+    margin: 3rem;
+    font-size: 0.8rem;
   }
 }

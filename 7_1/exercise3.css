@@ -82,20 +82,39 @@
 }
 
 @media print {
-  #header {
-    display: none;
-  }
-
-  #navigation {
-    display: none;
-  }
-
-  #footer {
+  #header, #navigation, #footer {
     display: none;
   }
 
   #aside {
     float: none;
     display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #navigation {
+    margin-top: 80px;
+  }
+
+  #navigation ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #header {
+    position: fixed;
   }
 }

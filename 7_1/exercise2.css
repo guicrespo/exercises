@@ -49,6 +49,7 @@ html {
     font-size: 1.2rem;
     text-align: justify;
     line-height: 2rem;
+    padding: 1rem;
   }
 
   footer {
@@ -79,6 +80,13 @@ html {
     justify-content: space-evenly;
     padding: 2rem 0;
     font-size: 1.2rem;
+  }
+
+  nav li {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
   }
 
   h2 {
@@ -114,6 +122,74 @@ html {
     text-align: justify;
     line-height: 2.5rem;
     padding: 0 1rem;
+  }
+
+  footer {
+    text-align: center;
+    margin: 3rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 810px) {
+
+  h1 { 
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  nav ul {
+    background-color: black;
+    color: white;
+    height: 3rem;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #asides {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .aside-one ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    list-style-type: none;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .aside-two h2 {
+    font-size: 1.5rem;
+  }
+
+  .aside-two ul {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .main-content h1 {
+    margin-top: 2.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  article p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 2rem;
+    padding: 0 6rem;
   }
 
   footer {

@@ -64,7 +64,7 @@ html {
 
 @media screen and (min-width: 450px) and (max-width: 810px) {
   body {
-    margin: 2rem 2rem;
+    margin: 2rem 3rem;
   }
 
   h1 { 
@@ -110,9 +110,10 @@ html {
   }
 
   article p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: justify;
-    line-height: 2rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
   }
 
   footer {

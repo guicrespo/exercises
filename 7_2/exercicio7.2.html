@@ -231,6 +231,16 @@
       animation-timing-function: cubic-bezier(1, 0.5, 0.5, 1);
     }
 
+    @keyframes sumir {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
   </style>
 </head>
 
@@ -302,6 +312,14 @@
       </section>
     </li>
   </ol>
+
+  <script>
+    const square12 = document.querySelector('#exercise-12');
+    square12.addEventListener('mousedown', function() {
+      square12.style.animation = "sumir 1s forwards";
+    })
+  </script>
+
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 //versão iterativa
-
 // const frase = "O rato roeu roupa do rei de roma";
 // function longestWord(texto) {
 //   let arrayPalavras = texto.split(' ');
@@ -17,7 +16,6 @@
 
 
 //versão com reduce e arrow function
-
 // console.log(longestWord(frase));
 // const frase = "O rato roeu roupa do rei de roma";
 // function longestWord(texto) {
@@ -31,7 +29,6 @@
 
 
 //versão com reduce e arrow function recursiva
-
 // const frase = "O rato roeu roupa do rei de roma";
 // function longestWord(texto) {
 //   let maiorPalavra = texto.split(' ').reduce((initial, current) => (initial.length > current.length) ? initial : current);

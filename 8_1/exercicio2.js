@@ -42,4 +42,4 @@
 
 //versão recursiva de uma linha
 const palavra = texto => texto.split(' ').reduce((inicial, atual) => (inicial.length > atual.length) ? inicial : atual);
-console.log(palavra("Antônio foi no banheiro e não sabemos o que aconteceu"));
+console.log(`${palavra("Antônio foi no banheiro e não sabemos o que aconteceu")} é a maior palavra da frase`);

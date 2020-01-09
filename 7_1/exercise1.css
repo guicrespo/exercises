@@ -1,0 +1,47 @@
+body {
+  font-size: large;
+  margin: 2rem 1.5rem;
+}
+
+h1 {
+  font-size: medium;
+}
+
+h2 {
+
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+	margin: 0 0 2rem;
+}
+
+@media screen and (min-width: 666px) {
+  body {
+    background-color: thistle;
+    font-size: medium;
+    margin: 3rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+
+  figure {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: lightcoral;
+    font-size: small;
+    margin: 4rem;
+    max-width: 1000px;
+  }
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>Cadastro de Currículo</h1>
+  </header>
+  <form action="post">
+    <fieldset id="dadosPessoais">
+      <legend>Dados Pessoais</legend>
+      <div>
+        <label for="nome">Nome</label>
+        <br>
+        <input type="text" id="nome" name="nome" maxlength="40" required placeholder="Digite seu nome completo">
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <br>
+        <input type="text" id="email" name="email" maxlength="50" required placeholder="Digite seu e-mail">
+      </div>
+      <div>
+        <label for="CPF">CPF</label>
+        <br>
+        <input type="number" id="CPF" name="CPF" maxlength="11" required placeholder="Digite seu CPF (somente números)"
+          pattern="[0-9]*" inputmode="numeric">
+      </div>
+      <div>
+        <label for="endereco">Endereço</label>
+        <br>
+        <input type="text" id="endereco" name="endereco" maxlength="200" required placeholder="Digite seu endereço">
+      </div>
+      <div>
+        <label for="cidade">Cidade</label>
+        <br>
+        <input type="text" id="cidade" name="cidade" maxlength="28" required placeholder="Digite sua cidade">
+      </div>
+      <div>
+        <label for="estados">Estado</label>
+        <br>
+        <input type="text" list="estados" placeholder="Digite seu Estado" required>
+        <datalist id="estados"></datalist>
+      </div>
+      <div required>
+        <label>Tipo</label>
+        <br>
+        <label class="radioCasa" for="casa"><input id="casa" type="radio" name="tipoResidencia" value="casa"
+            required>Casa</label>
+        <label class="radioCasa" for="apto"><input id="apto" type="radio" name="tipoResidencia"
+            value="apto">Apartamento</label>
+        <label class="radioCasa" for="outro"><input id="outro" type="radio" name="tipoResidencia"
+            value="outro">Outro</label>
+        <input id="outraResidencia" type="text" name="outroTipoResidencia">
+      </div>
+    </fieldset>
+    <fieldset id="dadosProfissionais">
+      <legend>Dados Profissionais</legend>
+      <div>
+        <label>Breve currículo</label>
+        <br>
+        <textarea maxlength="1000" rows="7" cols="50" placeholder="Limite: 1000(mil) caracteres" required></textarea>
+      </div>
+      <div>
+        <label for="cargo">Último Cargo</label>
+        <br>
+        <input type="text" id="cargo" name="cargo" maxlength="40" required placeholder="Digite seu último cargo">
+      </div>
+      <div>
+        <label for="descricaoCargo">Descrição do último cargo</label>
+        <br>
+        <input type="text" id="descricaoCargo" name="descricaoCargo" maxlength="500" required placeholder="Descreva em até 500 (quinhentos) caracteres">
+      </div>
+      <div>
+        <label for="descricaoCargo">Descrição do último cargo</label>
+        <br>
+        <input type="date" id="descricaoCargo" name="descricaoCargo" maxlength="500" required placeholder="Descreva em até 500 (quinhentos) caracteres">
+      </div>
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 3.4</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let node = document.createElement("h1");
+      let nodeText = document.createTextNode("Exercício 3.4 - JavaScript DOM");
+      node.appendChild(nodeText);
+      node.className = "title";
+      document.body.appendChild(node);
+
+      let primeiraDiv = document.createElement("div");
+      let classePrimeiraDiv = primeiraDiv.classList.add("main-content");
+      document.body.appendChild(primeiraDiv);
+      
+      let primeiroFilhoDiv = document.createElement("div");
+      let classeprimeiroFilhoDiv = primeiroFilhoDiv.classList.add("center-content");
+      document.getElementsByClassName("main-content")[0].appendChild(primeiroFilhoDiv);
+     
+      let paragrafoDivFilho = document.createElement("p");
+      let textoDivFilho = (paragrafoDivFilho.innerHTML = "Oi, Mundo!");
+      document.getElementsByTagName("div")[1].appendChild(paragrafoDivFilho);
+      
+      let segundoFilhoDiv = document.createElement("div");
+      let classeSegundoFilhoDiv = segundoFilhoDiv.classList.add("left-content");
+      document.getElementsByClassName("main-content")[0].appendChild(segundoFilhoDiv);
+      
+      let terceiroFilhoDiv = document.createElement("div");
+      let classeTerceiroFilhoDiv = terceiroFilhoDiv.classList.add("right-content");
+      document.getElementsByClassName("main-content")[0].appendChild(terceiroFilhoDiv);
+      
+      let img = document.createElement("img");
+      img.src = "https://picsum.photos/200";
+      let classeImg = img.classList.add("small-image");
+      document.getElementsByClassName("left-content")[0].appendChild(img);
+      
+      let lista = document.createElement("ul");
+      let elementosLista = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      for (let i = 0; i < elementosLista.length; i++) {
+        let elementoLista = document.createElement("li");
+        elementoLista.innerHTML = elementosLista[i];
+        lista.appendChild(elementoLista);
+      }
+      document.getElementsByClassName("right-content")[0].appendChild(lista);
+     
+      for (let i = 0; i < 3; i++) {
+        let tagh3 = document.createElement("h3");
+        tagh3.className = "description";
+        document.getElementsByClassName("main-content")[0].appendChild(tagh3);
+      }
+
+      document.getElementsByClassName("main-content")[0].removeChild(segundoFilhoDiv);
+
+      document.getElementsByClassName("right-content")[0].style.marginRight = "auto";
+
+      document.getElementsByClassName("center-content")[0].style.backgroundColor = "green";
+
+      for (i = 9; i >= 8; i--) {
+        let listaRemover = document.getElementsByTagName("li")[i];
+        lista.removeChild(listaRemover);
+      }
+
+    </script>
+  </body>
+</html>

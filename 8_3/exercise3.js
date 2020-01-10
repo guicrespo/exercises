@@ -18,11 +18,6 @@ const gunnar = {
 //Escreva a função personLikes, que dado um objeto de parâmetro que representa uma pessoa, retorna todos os gostos daquela pessoa
 const personLikes = ({name, age, likes}) => `${name} is ${age} years old and likes ${likes.join(", ")}.`
 // function personLikes ({name, age, likes}) {
-//   {
-//     name,
-//     age,
-//     likes
-//   }
 //   return `${name} is ${age} years old and likes ${likes.join(', ')}.`
 // }
 assert.equal(personLikes(alex), "Alex is 26 years old and likes fly fishing.")

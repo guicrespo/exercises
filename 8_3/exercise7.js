@@ -20,7 +20,6 @@ const ships = [
 // escreva shipLength abaixo
 //Escreva uma função shipLength que, dado um objeto representando um navio, retorna o comprimento dele, mostrando também a devida unidade de comprimento:
 const shipLength = ({name, length, measurementUnit = 'meters'}) => `${name} is ${length} ${measurementUnit} long`;
-//INACREDITÁVEL, mas fiz sozinho
 
 assert.equal(shipLength(ships[0]), "Titanic is 269.1 meters long")
 assert.equal(shipLength(ships[1]), "Queen Mary 2 is 1132 feet long")

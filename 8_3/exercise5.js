@@ -14,6 +14,7 @@ const myList = [1, 2, 3]
 // function swap([a, b, c]) {
 //   return [c, b, a];
 // }
+
 const swap = ([a, b, c]) => [c, b, a];
 
 const swappedList = swap(myList);

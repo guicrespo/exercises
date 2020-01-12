@@ -23,9 +23,9 @@ class BankAccount {
 //Crie a classe com o nome BankTransaction. Crie o método estático chamado transfer que receba 3 parametros: 1) um objeto da classe BankAccount que terá o dinheiro retirado da conta; 2) um objeto da classe BankAccount que terá o dinheiro depositado na conta; 3) um valor inteiro referente ao valor da transferência bancária:
 // escreva aqui o seu código
 class BankTransaction {
-  static transfer(account1, account2, valor) {
-    account1.withdrawal(valor);
-    account2.deposit(valor);
+  static transfer(balancoConta1, balancoConta2, valorTransacionado) {
+    balancoConta1.withdrawal(valorTransacionado);
+    balancoConta2.deposit(valorTransacionado);
   }
 }
 

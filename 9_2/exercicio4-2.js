@@ -15,11 +15,9 @@ const handleError = (errorReason) => console.log(`Error getting temperature: ${e
 const sendMarsTemperature = (callback) => {
   const didOperationSucceed = Math.random() >= 0.6;
   if (didOperationSucceed) {
-    const tempC = getMarsTemperature();
-    return callback(tempC)
+    callback(getMarsTemperature())
   } else {
-    const errorReason = 'busy';
-    return handleError(errorReason);
+    handleError('busy');
   }
 }
 

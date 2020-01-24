@@ -1,4 +1,4 @@
-const exercises1_6 = require('./exercise1-6');
+const exercises1_6 = require('./exercises1-6');
 const exercise7 = require('./exercise7');
 // import exercises1_6 from './exercise1';
 

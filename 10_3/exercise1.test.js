@@ -33,9 +33,11 @@ describe('Funções 1 a 6 da aula 10.1', () => {
     const arr = [1, 2, 3, 4];
     expect(exercises1_6.myRemoveWithoutCopy(arr, 3)).toEqual([1, 2, 4]);
     expect(exercises1_6.myRemoveWithoutCopy(arr, 3)).not.toEqual([1, 2, 3, 4]);
-    // exercises1_6.myRemoveWithoutCopy(arr, 3);
-    // expect(arr).toEqual([1, 2, 4]);
-    // expect(exercises1_6.myRemoveWithoutCopy(arr, 5)).toEqual([1, 2, 3, 4]);
+    const arr2 = [1, 2, 3, 4];
+    exercises1_6.myRemoveWithoutCopy(arr2, 2);
+    expect(arr2).toEqual([1, 3, 4]);
+    const arr3 = [1, 2, 3, 4];
+    expect(exercises1_6.myRemoveWithoutCopy(arr3, 5)).toEqual([1, 2, 3, 4]);
   })
 
   it('função myFizzBuzz', () => {

@@ -1,44 +1,38 @@
 const assert = require('assert');
 
 //Teste se uma variável foi definida
-let variavel = 'xablau';
-// let variavel
-assert(variavel !== undefined, 'a variável não foi definida');
+function varIsUndefined(variable) {
+  if(variable === undefined) return 'a variável não foi definida';
+  return variable;
+}
 
 //Teste se uma função foi definida
 function test() { return true };
-assert(typeof(test) === 'function', 'function')
-assert(typeof(test2) === 'undefined', 'undefined')
+function test2() { };
 
-//Teste se uma função foi definida
-let arr = [1, 2];
-assert.ok(arr instanceof Array, 'a variável não é um array')
+//Utilize assert.ok() para testar uma condição
+function isAnArray(arr) {
+  if (arr instanceof Array) return true;
+  return 'a variável não é um array';
+}
 
 //Compare dois objetos (JSON) para verificar se são idênticos ou não
-const obj = {
-  "estudantes": [
-    { "firstName": "Lauro", "lastName": "Lyra" },
-    { "firstName": "Pedro", "lastName": "Tófani" },
-    { "firstName": "Conrado", "lastName": "Medeiros" }
-  ]
+function objCompare (obj1, obj2) {
+  if (JSON.stringify(obj1) === JSON.stringify(obj2)) return true;
+  return 'os objetos não são iguais';
 }
-
-const obj2 = {
-  "estudantes": [
-    { "firstName": "Lauro", "lastName": "Lyra" },
-    { "firstName": "Pedro", "lastName": "Tófani" },
-    { "firstName": "Conrado", "lastName": "Medeiros" }
-  ]
-}
-
-assert.deepEqual(obj, obj2)
-
 //Faça o teste de uma função que compara dois números e retorna true se o primeiro for maior que o segundo e false caso contrário.
 function numCompare(num1, num2) {
-  if (num1 > num2) return true;
-  if (num1 < num2) return false;
+  if (num1 > num2) return [`${num1} é maior que ${num2}`];
+  if (num1 < num2) return [`${num1} é menor que ${num2}`];
   return "são iguais :)"
 }
-assert.deepEqual(numCompare(2, 1), true);
-assert.deepEqual(numCompare(1, 5), false);
-assert.deepEqual(numCompare(1, 1), 'são iguais :)')
+
+module.exports = {
+  varIsUndefined,
+  test,
+  test2,
+  isAnArray,
+  objCompare,
+  numCompare
+}

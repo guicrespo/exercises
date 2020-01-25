@@ -1,4 +1,11 @@
-const assert = require('assert');
+// export default {
+//   varIsUndefined,
+//   test,
+//   test2,
+//   isAnArray,
+//   objCompare,
+//   numCompare
+// }
 
 //Teste se uma variável foi definida
 function varIsUndefined(variable) {

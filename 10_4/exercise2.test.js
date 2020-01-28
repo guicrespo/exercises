@@ -4,15 +4,11 @@ const getUserName = require('./exercise2');
 // Dica: Veja os dados falsos utilizados no banco de dados, disponíveis na variável users para saber quais IDs existem.
 
 describe('verificar o resultado da função getUserName', () => {
-  it('quando o usuário é encontrado', async () => {
-    const result = await getUserName(4);
-    return expect(result).toEqual('Mark');
-    // return getUserName(4).then(result => expect(result).toEqual('Mark'));
+  it('quando o usuário é encontrado', () => {
+    return getUserName(4).then(result => expect(result).toEqual('Mark'));
   })
 
   it('quando o usuário não é encontrado', () => {
-    // const error = await getUserName(2);
-    // return expect(error).toEqual({ error: 'User with 2 not found.' });
     return getUserName(2).catch(error => expect(error).toEqual({ error: 'User with 2 not found.' }))
   })
 })

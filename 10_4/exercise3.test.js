@@ -2,7 +2,7 @@ const getUserName = require('./exercise3');
 
 describe('testando função getUserName com async e await', () => {
   it('quando o usuário é encontrado', async () => {
-    // const user = away getUserName(4);
+    // const user = await getUserName(4);
     // expect(user).toEqual('Mark');
     await expect(getUserName(4)).resolves.toEqual('Mark');
   })

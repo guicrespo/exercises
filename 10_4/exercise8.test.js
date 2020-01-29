@@ -23,6 +23,6 @@ const fetch = jest.fn(() => Promise.resolve({
 }));
 
 it('should fetch a joke', () => {
-  return fetchJoke()
+  return fetchJoke(fetch)
     .then(data => expect(data).toEqual('Whiteboards ... are remarkable.'));
 });

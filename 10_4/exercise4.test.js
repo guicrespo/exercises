@@ -7,4 +7,5 @@ it('verificar se repositórios estão na lista', () => {
     expect(result).toContain('sd-01-week4-5-project-meme-generator');
   })
 })
- //a função retorna um array com todos os repositórios através do map, por isso não é necessário fazer o .json() no teste, pois a função já faz isso. O toContain pesquisa nesse array se ele contém os repositórios selecionados
+ // a função retorna um array com todos os repositórios através do map, por isso não é necessário fazer o .json() no teste, pois a função já faz isso. O toContain pesquisa nesse array se ele contém os repositórios selecionados
+// teste de integração. Testa a conexão com a API, não se a função está funcionando corretamente.

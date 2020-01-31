@@ -2,8 +2,9 @@ import React from 'react';
 
 class PokemonGif extends React.Component {
   render() {
+    const image = this.props.image;
     return (
-      <img src={this.props.image} alt="imagem animada de pokémon" />
+      <img src={image} alt="imagem animada de pokémon" />
     )
   }
 }

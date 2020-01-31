@@ -1,18 +1,19 @@
 import React from 'react';
-// import PokemonGif from './PokemonGif';
+import PokemonGif from './PokemonGif';
 
-class Pokemon extends React.Component {
+class PokemonCard extends React.Component {
   render() {
-    const { name, type, averageWeight, image } = this.props.pokemon;
+    const { name, type, averageWeight } = this.props.pokemon;
+    const { image } = this.props.pokemon;
     return (
       <div>
-        <p>Name: {name}</p>
-        <p>Type: {type}</p>
-        <p>Average weight: {averageWeight.value}{averageWeight.measurementUnit}</p>
-        <img src={image} alt="imagem animada de pokémon" />
+        <p>{name}</p>
+        <PokemonGif image={image} />
+        <p>{type}</p>
+        <p>{averageWeight.value}{averageWeight.measurementUnit}</p>
       </div>
     )
   }
 }
 
-export default Pokemon;
+export default PokemonCard;

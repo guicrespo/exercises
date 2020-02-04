@@ -8,8 +8,11 @@ class Pokedex extends React.Component {
   }
 
   setNewState = () => {
-    const newIndex = this.state.index + 1;
-    this.setState({ index: this.state.index === 8 ? 0 : newIndex });
+    this.setState((state, props) => {
+      return { index: state.index === props.pokemons.length -1 ? 0 : state.index + 1 }
+    })
+    // const newIndex = this.state.index + 1;
+    // this.setState({ index: this.state.index === 8 ? 0 : newIndex });
   }
 
   render() {
@@ -22,11 +25,12 @@ class Pokedex extends React.Component {
           </button>
         </div>
         <div className="pokedex-items">
-          {
+          <PokemonCard pokemon={this.props.pokemons[this.state.index]} />
+          {/* {
             pokemons
               .filter((pokemon, index) => index === this.state.index)
               .map((pokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)
-          }
+          } */}
         </div>
       </div>
     )

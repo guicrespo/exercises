@@ -30,6 +30,10 @@ class Content extends React.Component {
     return false;
   }
 
+  componentDidMount() {
+    alert('contador iniciado');
+  }
+
   componentDidUpdate() {
     alert('número adicionado');
   }

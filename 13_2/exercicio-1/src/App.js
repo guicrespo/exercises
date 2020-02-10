@@ -30,6 +30,10 @@ class Content extends React.Component {
     return false;
   }
 
+  componentDidUpdate() {
+    alert('número adicionado');
+  }
+
   render() {
     return (
       <div>

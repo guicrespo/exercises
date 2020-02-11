@@ -39,6 +39,7 @@ class Content extends React.Component {
   }
 
   componentWillUnmount() {
+    localStorage.clear();
     localStorage.setItem(this.props.myNumber, `número ${this.props.myNumber} adicionado`);
   }
 

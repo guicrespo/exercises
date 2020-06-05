@@ -104,8 +104,8 @@ db.vendas.aggregate([
 db.vendas.aggregate([
   {
     $match: {
-      status: { $in: ["ENTREGUE", "EM SEPARAÇÃO"] },
-      dataVenda: { gte: ISODate("2019-01-01"), lte: ISODate("2019-12-31") }
+      status: { $in: ["ENTREGUE", "EM SEPARACAO"] },
+      dataVenda: { $gte: ISODate("2019-01-01"), $lte: ISODate("2019-12-31") }
     }
   },
   { $group: { _id: "$clienteId", total: { $sum: "$valorTotal" } } },
@@ -115,7 +115,40 @@ db.vendas.aggregate([
 
 10.
 db.vendas.aggregate([
+  {
+    $group: {
+      _id: "$clienteId",
+      totalCompras: {
+        $sum: 1
+      }
+    }
+  },
+  { $match: { totalCompras: { $gt: 5 } } },
+  { $group: { _id: null, clientes: { $sum: 1 } } },
+  { $project: { _id: 0 } }
+]);
+
+// outra forma
+db.vendas.aggregate([
   { $group: { _id: "$clienteId", compras: { $sum: 1 } } },
-  { $match: { compras: { gt: 5 } } },
+  { $match: { compras: { $gt: 5 } } },
   { $count: "clientes" }
+]);
+
+11.
+db.vendas.aggregate([
+  { $match: { dataVenda: { $gte: ISODate("2020-01-01"), $lte: ISODate("2020-03-31") } } },
+  { $group: { _id: "$clienteId", compras: { $sum: 1 } } },
+  { $match: { compras: { $lt: 3 } } },
+  { $count: "clientes" }
+]);
+
+12.
+db.vendas.aggregate([
+  { $match: { dataVenda: { $gte: ISODate("2020-01-01"), $lte: ISODate("2020-12-31") } } },
+  {
+    $lookup: {
+      from:"clientes",
+    }
+  }
 ]);

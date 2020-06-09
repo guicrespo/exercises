@@ -18,10 +18,18 @@ db.clientes.aggregate([
       from: "vendas",
       let: { id_cliente: "$clienteId" },
       pipeline: [
-        { $match: { $expr: { $eq: ["$clienteId", "$$id_cliente"] } } },
-        { $project: { compras: "$itens" } }
+        {
+          $match:
+          {
+            $expr: { $eq: ["$clienteId", "$$id_cliente"] },
+            dataVenda: { $gte: ISODate("2019-06-01"), $lte: ISODate("2020-03-31") }
+          }
+        },
+        {
+          $project: { compras: "$itens" }
+        },
       ],
       as: "compras"
     }
   }
-]);
+]).itcount();

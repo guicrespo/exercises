@@ -1,0 +1,15 @@
+{
+  "name": "calcula-imc",
+  "version": "1.0.0",
+  "description": "pacote para calcular o IMC e exibi-lo na tela",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "guicgs",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

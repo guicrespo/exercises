@@ -1,0 +1,16 @@
+{
+  "name": "exercises27.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "showFileContentAndBytes.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "guicgs",
+  "license": "ISC"
+}

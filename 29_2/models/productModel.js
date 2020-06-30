@@ -1,74 +1,40 @@
-const fs = require('fs');
+const connection = require('./connection');
+const { ObjectId } = require('mongodb');
 
 class Product {
   constructor(name, brand) {
-    this.id = null;
     this.name = name;
     this.brand = brand;
   }
 
-  getAll() {
-    const rawData = fs.readFileSync('./products.json');
-    const products = JSON.parse(rawData);
-
+  async getAll() {
+    const db = await connection();
+    const products = await db.collection('products').find().toArray();
     return products;
   }
 
-  getById(id) {
-    const rawData = fs.readFileSync('./products.json');
-    const product = JSON.parse(rawData)
-      .find((product) => product.id === parseInt(id));
-
+  async getById(id) {
+    const db = await connection();
+    const product = await db.collection('products').findOne({ id: parseInt(id) });
     return product;
   }
 
-  add() {
-    const rawData = fs.readFileSync('./products.json')
-    const products = JSON.parse(rawData);
-
-    this.id = products[products.length - 1].id + 1
-    products.push(this);
-
-    fs.writeFile('./products.json', JSON.stringify(products), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('write file ok');
-    });
-
-    return this;
+  async add() {
+    const db = await connection();
+    const newProduct = await db.collection('products').insertOne(this);
+    return newProduct;
   }
 
-  delete(id) {
-    const rawData = fs.readFileSync('./products.json');
-    const products = JSON.parse(rawData).filter(product => product.id !== parseInt(id));
-
-    fs.writeFile('./products.json', JSON.stringify(products), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('write file ok');
-    });
-
-    return products;
+  async delete(id) {
+    const db = await connection();
+    const product = await db.collection('products').deleteOne({ id: parseInt(id) });
+    return product;
   }
 
-  addOrUpdate(id) {
-    const rawData = fs.readFileSync('./products.json');
-    const products = JSON.parse(rawData);
-
-    const product = products.find(product => product.id === parseInt(id));
-
-    if (product) {
-      product.name = this.name;
-      product.brand = this.brand;
-    } else {
-      this.id = products[products.length - 1].id + 1;
-      products.push(this);
-    }
-
-    fs.writeFile('./products.json', JSON.stringify(products), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('write file ok');
-    });
-
-    return products;
+  async update(id) {
+    const db = await connection();
+    const product = await db.collection('products').updateOne({ id: parseInt(id) }, { $set: this });
+    return product;
   }
 }
 

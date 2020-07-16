@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.status(200).send('Está vivo!');
 })
 

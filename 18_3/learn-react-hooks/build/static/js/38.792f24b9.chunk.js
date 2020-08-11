@@ -1,0 +1,2 @@
+(this["webpackJsonplearn-react-hooks"]=this["webpackJsonplearn-react-hooks"]||[]).push([[38],{62:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a);function l(){return r.a.createElement("div",null,r.a.createElement("form",null,r.a.createElement("label",{htmlFor:"name"},"Name: "),r.a.createElement("input",{onChange:function(e){},id:"name"})),"Please type your name")}n.default=function(){return r.a.createElement(l,null)}}}]);
+//# sourceMappingURL=38.792f24b9.chunk.js.map

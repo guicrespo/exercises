@@ -8,3 +8,9 @@ def highestValue(num, num2):
 
 
 print(highestValue(2, 4), highestValue(4, 2), highestValue(2, 2))
+
+
+list = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27]
+
+print(min(list))
+print(sum(list)/len(list))
